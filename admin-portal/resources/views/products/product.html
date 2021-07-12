@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Georges Plant Shop</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/foundation-float.css">
+        <!-- Insert this within your head tag and after foundation.css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Compressed JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/vendor/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+
+      <div id="offcanvas-full-screen" class="offcanvas-full-screen" data-off-canvas data-transition="overlap">
+        <div class="offcanvas-full-screen-inner">
+          <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <ul class="offcanvas-full-screen-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/Shop/shop.html">Shop</a></li>
+            <li><a href="../about.html">About us</a></li>
+            <li><a href="../contact.blade.php">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Start Top Bar -->
+      <div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="offcanvas-full-screen"></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      <div class="top-bar" id="top-menu">
+        <div class="top-bar-left">
+          <ul class="dropdown vertical medium-horizontal menu" data-dropdown-menu>
+            <li class="menu-text">Georges Plant Shop</li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/Shop/shop.html">Shop</a></li>
+            <li><a href="../about.html">About us</a></li>
+            <li><a href="../contact.blade.php">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+        <!-- End Top Bar -->
+    <div class="row align-center">
+        <div class="product-details column medium-6 center-text-for-small-only">
+            <h1>Product Name</h1>
+            <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id magna ac quam semper.deta</p>
+            <div class="row">
+              <div class="column small-12 large-6">
+                <h5>Item</h5>
+                <img class="thumbnail" src="../images/300x400-placeholder.png">
+              </div>
+              <div class="column small-12 large-6">
+                <h6 class="product-color-title">Size</h6>
+                  <form class="product-option-selection">
+                      <select>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                      </select>
+                    </label>
+                  </form>
+              </div>
+            </div>
+            <div class="product-details-add-to-cart">
+              <p><span class="in-stock">In Stock</span> <span class="dim-text">(Only 3 left in Stock)</span></p>
+              <hr>
+              <p class="price">$19.99</p>
+              <p> <span>Qty:</span> <input class="qty" type="text" value="1"> </p>
+              <button class="button button-rounded expanded">Add to Cart</button>
+            </div>
+            <p class="shipping">Available for Free Shipping &amp; Return</p>
+        </div>
+    </div>
+
+    <script src="js/foundation.js"></script>
+    <script>
+      $(document).ready(function() {
+         $(document).foundation();
+      })
+    </script>
+</body>
+</html>

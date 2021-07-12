@@ -1,0 +1,337 @@
+$primary-color: white;
+$black: black;
+$white: white;
+$light-gray: rgb(204, 204, 204);
+$dark-gray: rgb(97, 97, 97);
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #ffffff 0%, #edffef 90%);
+  background-repeat: no-repeat;
+}
+
+.float-right {
+  float: right;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.top-bar {
+  .top-bar-left {
+    li :hover {
+      background-color:lightblue;
+    }
+  }
+}
+.button-rounded {
+  border-radius: 12px;
+}
+
+.large {
+  font-size: large;
+}
+
+main {
+  padding: 40px;
+  .row {
+    .column {
+      padding:10px;
+    }
+  }
+}
+
+footer {
+  background-color: #e6e6e6;
+  padding: 80px;
+  a {
+    display: block;
+  }
+  .column {
+    padding-bottom: 20px;
+  }
+}
+.product-details {
+  padding: 2rem;
+}
+
+.contact-maps {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+// optional styles to round the button group edges
+.button-group.round {
+  :first-child {
+    border-radius: 5000px 0 0 5000px;
+  }
+
+  :last-child {
+    border-radius: 0 5000px 5000px 0;
+  }
+}
+
+// class that spaces blocks vertically - will be built into Foundation 6.4
+.column-block {
+  margin-bottom: 30px;
+}
+
+
+.product-option-selection{
+  
+  input[type=radio] {
+    display: none; 
+    margin: 10px;
+  }
+  
+  input[type=radio] + label {
+    display: inline-block;
+    margin: -2px;
+    border-color: #ddd;
+    margin-right: 0.3rem;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding: 0.4rem;
+  }
+  
+  input[type=radio]:checked + label {     
+    background: lighten($primary-color, 43%);
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    color: lighten($black, 20%);
+    font-weight: 600;
+    padding: 0.3rem;
+  }
+}
+
+.product-details-add-to-cart {
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+  border: solid 1px $light-gray;
+  margin-bottom: 25px;
+  padding: 22px;
+  
+  .in-stock {
+    color: #1eac60;
+    font-weight: 700;
+  }
+  
+  .dim-text {
+    color: $dark-gray;
+  }
+  
+  .price {
+    float: right;
+    font-weight: 600;
+    font-size: 24px;
+    color: darken($dark-gray,25%);
+  }
+  
+  .qty {
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+  
+  .button {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.offcanvas-full-screen {
+  position: fixed;
+  z-index: 1;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: #0a0a0a;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  overflow-y: auto;
+}
+
+[data-whatinput='mouse'] .offcanvas-full-screen {
+  outline: 0;
+}
+
+.offcanvas-full-screen.is-transition-overlap {
+  z-index: 10;
+}
+
+.offcanvas-full-screen.is-transition-overlap.is-open {
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+}
+
+.offcanvas-full-screen.is-open {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.offcanvas-full-screen.is-open ~ .off-canvas-content {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.offcanvas-full-screen.is-transition-push::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+  content: " ";
+}
+
+.offcanvas-full-screen.is-transition-overlap.is-open ~ .off-canvas-content {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.offcanvas-full-screen-inner {
+  padding: 1rem;
+  text-align: center;
+}
+
+.offcanvas-full-screen-menu {
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.offcanvas-full-screen-menu > li {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+[data-whatinput='mouse'] .offcanvas-full-screen-menu > li {
+  outline: 0;
+}
+
+.offcanvas-full-screen-menu > li > a {
+  display: block;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+}
+
+.offcanvas-full-screen-menu input,
+.offcanvas-full-screen-menu select,
+.offcanvas-full-screen-menu a,
+.offcanvas-full-screen-menu button {
+  margin-bottom: 0;
+}
+
+.offcanvas-full-screen-menu > li {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.offcanvas-full-screen-menu > li > a {
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.offcanvas-full-screen-menu a {
+  color: #fefefe;
+}
+
+.offcanvas-full-screen-menu a:hover {
+  color: #b2b2b2;
+}
+
+.offcanvas-full-screen-close {
+  color: #fefefe;
+  font-size: 5rem;
+}
+
+.offcanvas-full-screen-close:hover {
+  color: #b2b2b2;
+}
+
+.fa {
+  background-color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 3.6rem;
+  transition: all 0.3s;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+#load-more-button {
+  text-align: center;
+}
