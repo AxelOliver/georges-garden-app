@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->foreignId('category_id')->constrained();
-            $table->string('image');
+            $table->string('image')->default('300x400-placeholder.png');
             $table->integer('price');
         });
     }
