@@ -30,14 +30,9 @@ class ProductController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'image' => 'required|mimes:jpg,png,jpeg|max:8000',
             'category_id' => 'required'
         ]);
 
-        $newImageName = time() . '-' . $request->name . '.' . $request->image->extension();
-        $request->image->move(public_path('images'), $newImageName);
-
-        $request->image = $newImageName;
         return Product::create($request->all());
     }
 
@@ -61,7 +56,6 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $updated = product::find($id);
         $updated->fill($request->all());
         $updated->save();
